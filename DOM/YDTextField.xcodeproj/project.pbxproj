@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC3A4BCE1F7933DC00166568 /* YDRegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A4BC91F7933DC00166568 /* YDRegularExpression.m */; };
+		FC3A4BCF1F7933DC00166568 /* YDTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A4BCB1F7933DC00166568 /* YDTextField.m */; };
+		FC3A4BD01F7933DC00166568 /* YDTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A4BCD1F7933DC00166568 /* YDTextFieldView.m */; };
+		FCDB23751F72433A00F51A97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDB23741F72433A00F51A97 /* main.m */; };
+		FCDB23781F72433A00F51A97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDB23771F72433A00F51A97 /* AppDelegate.m */; };
+		FCDB237B1F72433A00F51A97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDB237A1F72433A00F51A97 /* ViewController.m */; };
+		FCDB237E1F72433A00F51A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDB237C1F72433A00F51A97 /* Main.storyboard */; };
+		FCDB23801F72433A00F51A97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCDB237F1F72433A00F51A97 /* Assets.xcassets */; };
+		FCDB23831F72433A00F51A97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDB23811F72433A00F51A97 /* LaunchScreen.storyboard */; };
+		FCDB238E1F72433A00F51A97 /* YDTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDB238D1F72433A00F51A97 /* YDTextFieldTests.m */; };
+		FCDB23991F72433A00F51A97 /* YDTextFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDB23981F72433A00F51A97 /* YDTextFieldUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCDB238A1F72433A00F51A97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCDB23681F72433A00F51A97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCDB236F1F72433A00F51A97;
+			remoteInfo = YDTextField;
+		};
+		FCDB23951F72433A00F51A97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCDB23681F72433A00F51A97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCDB236F1F72433A00F51A97;
+			remoteInfo = YDTextField;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC3A4BC81F7933DC00166568 /* YDRegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDRegularExpression.h; sourceTree = "<group>"; };
+		FC3A4BC91F7933DC00166568 /* YDRegularExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDRegularExpression.m; sourceTree = "<group>"; };
+		FC3A4BCA1F7933DC00166568 /* YDTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTextField.h; sourceTree = "<group>"; };
+		FC3A4BCB1F7933DC00166568 /* YDTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTextField.m; sourceTree = "<group>"; };
+		FC3A4BCC1F7933DC00166568 /* YDTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTextFieldView.h; sourceTree = "<group>"; };
+		FC3A4BCD1F7933DC00166568 /* YDTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTextFieldView.m; sourceTree = "<group>"; };
+		FCDB23701F72433A00F51A97 /* YDTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YDTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCDB23741F72433A00F51A97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FCDB23761F72433A00F51A97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FCDB23771F72433A00F51A97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FCDB23791F72433A00F51A97 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FCDB237A1F72433A00F51A97 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FCDB237D1F72433A00F51A97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCDB237F1F72433A00F51A97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCDB23821F72433A00F51A97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCDB23841F72433A00F51A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCDB23891F72433A00F51A97 /* YDTextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YDTextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCDB238D1F72433A00F51A97 /* YDTextFieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDTextFieldTests.m; sourceTree = "<group>"; };
+		FCDB238F1F72433A00F51A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCDB23941F72433A00F51A97 /* YDTextFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YDTextFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCDB23981F72433A00F51A97 /* YDTextFieldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDTextFieldUITests.m; sourceTree = "<group>"; };
+		FCDB239A1F72433A00F51A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCDB236D1F72433A00F51A97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCDB23861F72433A00F51A97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCDB23911F72433A00F51A97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC3A4BC71F7933DC00166568 /* YDTextField */ = {
+			isa = PBXGroup;
+			children = (
+				FC3A4BC81F7933DC00166568 /* YDRegularExpression.h */,
+				FC3A4BC91F7933DC00166568 /* YDRegularExpression.m */,
+				FC3A4BCA1F7933DC00166568 /* YDTextField.h */,
+				FC3A4BCB1F7933DC00166568 /* YDTextField.m */,
+				FC3A4BCC1F7933DC00166568 /* YDTextFieldView.h */,
+				FC3A4BCD1F7933DC00166568 /* YDTextFieldView.m */,
+			);
+			path = YDTextField;
+			sourceTree = "<group>";
+		};
+		FCDB23671F72433A00F51A97 = {
+			isa = PBXGroup;
+			children = (
+				FCDB23721F72433A00F51A97 /* YDTextField */,
+				FCDB238C1F72433A00F51A97 /* YDTextFieldTests */,
+				FCDB23971F72433A00F51A97 /* YDTextFieldUITests */,
+				FCDB23711F72433A00F51A97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCDB23711F72433A00F51A97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCDB23701F72433A00F51A97 /* YDTextField.app */,
+				FCDB23891F72433A00F51A97 /* YDTextFieldTests.xctest */,
+				FCDB23941F72433A00F51A97 /* YDTextFieldUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCDB23721F72433A00F51A97 /* YDTextField */ = {
+			isa = PBXGroup;
+			children = (
+				FC3A4BC71F7933DC00166568 /* YDTextField */,
+				FCDB23761F72433A00F51A97 /* AppDelegate.h */,
+				FCDB23771F72433A00F51A97 /* AppDelegate.m */,
+				FCDB23791F72433A00F51A97 /* ViewController.h */,
+				FCDB237A1F72433A00F51A97 /* ViewController.m */,
+				FCDB237C1F72433A00F51A97 /* Main.storyboard */,
+				FCDB237F1F72433A00F51A97 /* Assets.xcassets */,
+				FCDB23811F72433A00F51A97 /* LaunchScreen.storyboard */,
+				FCDB23841F72433A00F51A97 /* Info.plist */,
+				FCDB23731F72433A00F51A97 /* Supporting Files */,
+			);
+			path = YDTextField;
+			sourceTree = "<group>";
+		};
+		FCDB23731F72433A00F51A97 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCDB23741F72433A00F51A97 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FCDB238C1F72433A00F51A97 /* YDTextFieldTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCDB238D1F72433A00F51A97 /* YDTextFieldTests.m */,
+				FCDB238F1F72433A00F51A97 /* Info.plist */,
+			);
+			path = YDTextFieldTests;
+			sourceTree = "<group>";
+		};
+		FCDB23971F72433A00F51A97 /* YDTextFieldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FCDB23981F72433A00F51A97 /* YDTextFieldUITests.m */,
+				FCDB239A1F72433A00F51A97 /* Info.plist */,
+			);
+			path = YDTextFieldUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCDB236F1F72433A00F51A97 /* YDTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCDB239D1F72433A00F51A97 /* Build configuration list for PBXNativeTarget "YDTextField" */;
+			buildPhases = (
+				FCDB236C1F72433A00F51A97 /* Sources */,
+				FCDB236D1F72433A00F51A97 /* Frameworks */,
+				FCDB236E1F72433A00F51A97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YDTextField;
+			productName = YDTextField;
+			productReference = FCDB23701F72433A00F51A97 /* YDTextField.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCDB23881F72433A00F51A97 /* YDTextFieldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCDB23A01F72433A00F51A97 /* Build configuration list for PBXNativeTarget "YDTextFieldTests" */;
+			buildPhases = (
+				FCDB23851F72433A00F51A97 /* Sources */,
+				FCDB23861F72433A00F51A97 /* Frameworks */,
+				FCDB23871F72433A00F51A97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCDB238B1F72433A00F51A97 /* PBXTargetDependency */,
+			);
+			name = YDTextFieldTests;
+			productName = YDTextFieldTests;
+			productReference = FCDB23891F72433A00F51A97 /* YDTextFieldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FCDB23931F72433A00F51A97 /* YDTextFieldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCDB23A31F72433A00F51A97 /* Build configuration list for PBXNativeTarget "YDTextFieldUITests" */;
+			buildPhases = (
+				FCDB23901F72433A00F51A97 /* Sources */,
+				FCDB23911F72433A00F51A97 /* Frameworks */,
+				FCDB23921F72433A00F51A97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCDB23961F72433A00F51A97 /* PBXTargetDependency */,
+			);
+			name = YDTextFieldUITests;
+			productName = YDTextFieldUITests;
+			productReference = FCDB23941F72433A00F51A97 /* YDTextFieldUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCDB23681F72433A00F51A97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "黄亚栋";
+				TargetAttributes = {
+					FCDB236F1F72433A00F51A97 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = S69MK7XEGZ;
+						ProvisioningStyle = Automatic;
+					};
+					FCDB23881F72433A00F51A97 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FCDB236F1F72433A00F51A97;
+					};
+					FCDB23931F72433A00F51A97 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FCDB236F1F72433A00F51A97;
+					};
+				};
+			};
+			buildConfigurationList = FCDB236B1F72433A00F51A97 /* Build configuration list for PBXProject "YDTextField" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCDB23671F72433A00F51A97;
+			productRefGroup = FCDB23711F72433A00F51A97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCDB236F1F72433A00F51A97 /* YDTextField */,
+				FCDB23881F72433A00F51A97 /* YDTextFieldTests */,
+				FCDB23931F72433A00F51A97 /* YDTextFieldUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCDB236E1F72433A00F51A97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCDB23831F72433A00F51A97 /* LaunchScreen.storyboard in Resources */,
+				FCDB23801F72433A00F51A97 /* Assets.xcassets in Resources */,
+				FCDB237E1F72433A00F51A97 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCDB23871F72433A00F51A97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCDB23921F72433A00F51A97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCDB236C1F72433A00F51A97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCDB237B1F72433A00F51A97 /* ViewController.m in Sources */,
+				FCDB23781F72433A00F51A97 /* AppDelegate.m in Sources */,
+				FCDB23751F72433A00F51A97 /* main.m in Sources */,
+				FC3A4BCE1F7933DC00166568 /* YDRegularExpression.m in Sources */,
+				FC3A4BCF1F7933DC00166568 /* YDTextField.m in Sources */,
+				FC3A4BD01F7933DC00166568 /* YDTextFieldView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCDB23851F72433A00F51A97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCDB238E1F72433A00F51A97 /* YDTextFieldTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCDB23901F72433A00F51A97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCDB23991F72433A00F51A97 /* YDTextFieldUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCDB238B1F72433A00F51A97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCDB236F1F72433A00F51A97 /* YDTextField */;
+			targetProxy = FCDB238A1F72433A00F51A97 /* PBXContainerItemProxy */;
+		};
+		FCDB23961F72433A00F51A97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCDB236F1F72433A00F51A97 /* YDTextField */;
+			targetProxy = FCDB23951F72433A00F51A97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FCDB237C1F72433A00F51A97 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCDB237D1F72433A00F51A97 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCDB23811F72433A00F51A97 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCDB23821F72433A00F51A97 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCDB239B1F72433A00F51A97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCDB239C1F72433A00F51A97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCDB239E1F72433A00F51A97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S69MK7XEGZ;
+				INFOPLIST_FILE = YDTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HYD.YDTextField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FCDB239F1F72433A00F51A97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S69MK7XEGZ;
+				INFOPLIST_FILE = YDTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HYD.YDTextField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FCDB23A11F72433A00F51A97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YDTextFieldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HYD.YDTextFieldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YDTextField.app/YDTextField";
+			};
+			name = Debug;
+		};
+		FCDB23A21F72433A00F51A97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YDTextFieldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HYD.YDTextFieldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YDTextField.app/YDTextField";
+			};
+			name = Release;
+		};
+		FCDB23A41F72433A00F51A97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YDTextFieldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HYD.YDTextFieldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YDTextField;
+			};
+			name = Debug;
+		};
+		FCDB23A51F72433A00F51A97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YDTextFieldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HYD.YDTextFieldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YDTextField;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCDB236B1F72433A00F51A97 /* Build configuration list for PBXProject "YDTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCDB239B1F72433A00F51A97 /* Debug */,
+				FCDB239C1F72433A00F51A97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCDB239D1F72433A00F51A97 /* Build configuration list for PBXNativeTarget "YDTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCDB239E1F72433A00F51A97 /* Debug */,
+				FCDB239F1F72433A00F51A97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCDB23A01F72433A00F51A97 /* Build configuration list for PBXNativeTarget "YDTextFieldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCDB23A11F72433A00F51A97 /* Debug */,
+				FCDB23A21F72433A00F51A97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCDB23A31F72433A00F51A97 /* Build configuration list for PBXNativeTarget "YDTextFieldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCDB23A41F72433A00F51A97 /* Debug */,
+				FCDB23A51F72433A00F51A97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCDB23681F72433A00F51A97 /* Project object */;
+}
