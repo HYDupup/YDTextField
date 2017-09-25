@@ -30,7 +30,7 @@ typedef enum{
 - (void)YDtextFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason;
 - (BOOL)YDtextFieldShouldClear:(UITextField *)textField;
 - (BOOL)YDtextFieldShouldReturn:(UITextField *)textField;
-- (void)YDTextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
+- (void)YDTextField:(UITextField *)textField;
 
 @end
 
@@ -56,6 +56,11 @@ typedef enum{
  */
 @property (nonatomic,strong)UIFont *font;
 
+/*
+ 是否加密
+ */
+@property (nonatomic,assign)BOOL isSecureTextEntry;
+    
 /*
  提示文字
  */

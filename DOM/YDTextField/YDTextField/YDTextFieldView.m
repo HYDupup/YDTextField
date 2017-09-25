@@ -11,17 +11,16 @@
 
 @interface YDTextFieldView()<UITextFieldDelegate>
 
-
-
 @property (nonatomic,strong)YDRegularExpression *regularExpression;
 
 //记录字符的长度
 @property (nonatomic,assign)NSInteger strLength;
 
-
 //正则表达式
 @property (nonatomic,strong)NSMutableString *pattern;
 
+@property (nonatomic,copy)NSString *allStr;
+        
 @end
 
 @implementation YDTextFieldView
@@ -77,14 +76,11 @@
     //默认的输入文字大小
     self.font = [UIFont systemFontOfSize:15.0f];
     
+    //默认 不加密
+    self.isSecureTextEntry = NO;
+    
     //默认的提示文字 （无）
     self.placeholder = @"";
-    
-    //默认的提示文字颜色 (灰白色)
-    self.placeholderNomalColor = [UIColor lightGrayColor];
-    
-    //默认的提示文字第一响应者颜色 (灰白色)
-    self.placeholderhighlightColor = [UIColor lightGrayColor];
     
     //默认的光标颜色 （蓝色）
     self.tintColor = [UIColor blueColor];
@@ -146,7 +142,13 @@
     _font = font;
     self.textField.font = font;
 }
-
+    
+//是否加密
+-(void)setIsSecureTextEntry:(BOOL)isSecureTextEntry{
+    _isSecureTextEntry = isSecureTextEntry;
+    self.textField.secureTextEntry = isSecureTextEntry;
+}
+    
 //提示文字
 -(void)setPlaceholder:(NSString *)placeholder{
     _placeholder = placeholder;
@@ -187,9 +189,7 @@
 #pragma mark UITextFieldDelegate
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
 
-    if ([self.delegate respondsToSelector:@selector(YDTextField:shouldChangeCharactersInRange:replacementString:)]) {
-        [self.delegate YDTextField:self.textField shouldChangeCharactersInRange:range replacementString:string];
-    }
+    self.allStr = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
     if ([string isEqualToString:@""]) {
         return YES;
@@ -256,6 +256,10 @@
 
 -(void)textFieldChanged:(YDTextField *)sender{
     
+        if (self.textField.secureTextEntry == YES) {
+            sender.text = self.allStr;
+        }
+    
         NSRegularExpression *regx = [NSRegularExpression regularExpressionWithPattern:self.pattern options:NSRegularExpressionCaseInsensitive error:NULL];
         
         UITextRange *selectedRange = sender.markedTextRange;
@@ -299,7 +303,10 @@
                 }else{
                     sender.text = resultString;
                 }
-        
+            
+            if ([self.delegate respondsToSelector:@selector(YDTextField:)]) {
+                [self.delegate YDTextField:sender];
+            }
         }
     
 }
