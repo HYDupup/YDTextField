@@ -14,7 +14,7 @@
     
     self = [super initWithFrame:frame];
     if (self) {
-       
+        
         [self setBackgroundColor:[UIColor clearColor]];
         
     }
@@ -22,13 +22,16 @@
 }
 
 -(BOOL)becomeFirstResponder{
-    
-    [self setValue:self.highlightColor forKeyPath:@"_placeholderLabel.textColor"];
+    if (self.highlightColor != nil) {
+        [self setValue:self.highlightColor forKeyPath:@"_placeholderLabel.textColor"];
+    }
     return [super becomeFirstResponder];
 }
 
 -(BOOL)resignFirstResponder{
-    [self setValue:self.nomalColor forKeyPath:@"_placeholderLabel.textColor"];
+    if (self.nomalColor != nil) {
+        [self setValue:self.nomalColor forKeyPath:@"_placeholderLabel.textColor"];
+    }
     return [super resignFirstResponder];
 }
 
