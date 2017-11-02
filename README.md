@@ -20,4 +20,4 @@ BanChineseType//禁止输入中文 <br>
 ### 3.设置UITextField提示文字的默认颜色和在第一响应状态的颜色 <br>
 @property (nonatomic,strong)UIColor *placeholderNomalColor;//提示文字颜色 <br>
 @property (nonatomic,strong)UIColor *placeholderhighlightColor;//提示文字第一响应者颜色 <br>
-### 4.UITextField在加密与不加密状态直接交换时，文本不会清空 <br>
+### 4.UITextField在加密与不加密状态之间交换时，文本不会清空 <br>
