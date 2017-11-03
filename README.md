@@ -1,4 +1,6 @@
 # YDTextField
+***
+
 ## YDTextField是基于UITextField封装的控件，主要功能如下：<br>
 ### 1.限制输入文字的类型 <br>
 AllType = 0,//全部 <br>
