@@ -1,5 +1,4 @@
 # YDTextField
-## pod 'YDTextField' 即可使用
 ## YDTextField是基于UITextField封装的控件，主要功能如下：<br>
 ### 1.限制输入文字的类型 <br>
 AllType = 0,//全部 <br>
@@ -22,3 +21,7 @@ BanChineseType//禁止输入中文 <br>
 @property (nonatomic,strong)UIColor *placeholderNomalColor;//提示文字颜色 <br>
 @property (nonatomic,strong)UIColor *placeholderhighlightColor;//提示文字第一响应者颜色 <br>
 ### 4.UITextField在加密与不加密状态之间交换时，文本不会清空 <br>
+## Installation
+```
+pod 'YDTextField' 即可使用
+```
