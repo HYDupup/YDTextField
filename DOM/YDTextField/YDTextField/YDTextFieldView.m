@@ -188,7 +188,11 @@
 
 #pragma mark UITextFieldDelegate
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-
+    
+    if (string isEqualToString:@" ") {
+        return NO;
+    }
+    
     self.allStr = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
     if ([string isEqualToString:@""]) {
@@ -261,7 +265,8 @@
         }
     
         NSRegularExpression *regx = [NSRegularExpression regularExpressionWithPattern:self.pattern options:NSRegularExpressionCaseInsensitive error:NULL];
-        
+    
+    //高亮位置
         UITextRange *selectedRange = sender.markedTextRange;
         UITextPosition *position = [sender positionFromPosition:selectedRange.start offset:0];
         

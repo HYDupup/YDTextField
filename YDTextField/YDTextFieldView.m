@@ -188,7 +188,9 @@
 
 #pragma mark UITextFieldDelegate
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-
+    if (string isEqualToString:@" ") {
+        return NO;
+    }
     self.allStr = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
     if ([string isEqualToString:@""]) {
