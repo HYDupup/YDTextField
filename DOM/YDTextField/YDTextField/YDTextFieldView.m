@@ -199,13 +199,17 @@
         return YES;
     }
 
-    if (self.isMarkChar & self.isEmoji) {
+    if ([self stringContainsNine:string]) {
+        return YES;
+    }
+    
+    if (self.isMarkChar && self.isEmoji) {
         if (![self stringContainsMarkChar:string]) {
             return [self stringContainsMarkChar:string];
         }else if (![self stringContainsEmoji:string]){
             return [self stringContainsEmoji:string];
         }
-    }else if(self.isMarkChar | self.isEmoji){
+    }else if(self.isMarkChar || self.isEmoji){
         if (self.isMarkChar) {
             return [self stringContainsMarkChar:string];
         }
@@ -363,5 +367,14 @@
     return !returnValue;
 }
 
+//判断是否有九宫格
+-(BOOL)stringContainsNine:(NSString *)string
+{
+    NSArray *nine = @[@"➋",@"➌",@"➍",@"➎",@"➏",@"➐",@"➑",@"➒"];
+    if ([nine containsObject:string]) {
+        return YES;
+    }
+    return NO;
+}
 
 @end
