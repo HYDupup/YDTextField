@@ -20,7 +20,7 @@
 @property (nonatomic,strong)NSMutableString *pattern;
 
 @property (nonatomic,copy)NSString *allStr;
-        
+
 @end
 
 @implementation YDTextFieldView
@@ -35,7 +35,7 @@
         self.regularExpression = [[YDRegularExpression alloc]init];
         
         self.pattern = [[NSMutableString alloc]init];
-
+        
         //默认的限制类型
         self.type = AllType;
         
@@ -51,9 +51,9 @@
         [self setBackgroundColor:[UIColor clearColor]];
         
         self.regularExpression = [[YDRegularExpression alloc]init];
-
+        
         self.pattern = [[NSMutableString alloc]init];
-
+        
         self.type = type;
         
         [self creatInitUI];
@@ -67,7 +67,7 @@
     self.textField = [[YDTextField alloc]initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
     self.textField.delegate = self;
     [self.textField addTarget:self action:@selector(textFieldChanged:) forControlEvents:UIControlEventEditingChanged];
-
+    
     [self addSubview:self.textField];
     
     //默认的输入文本颜色 (白色)
@@ -142,13 +142,13 @@
     _font = font;
     self.textField.font = font;
 }
-    
+
 //是否加密
 -(void)setIsSecureTextEntry:(BOOL)isSecureTextEntry{
     _isSecureTextEntry = isSecureTextEntry;
     self.textField.secureTextEntry = isSecureTextEntry;
 }
-    
+
 //提示文字
 -(void)setPlaceholder:(NSString *)placeholder{
     _placeholder = placeholder;
@@ -188,22 +188,28 @@
 
 #pragma mark UITextFieldDelegate
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
     if ([string isEqualToString:@" "]) {
         return NO;
     }
+    
     self.allStr = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
     if ([string isEqualToString:@""]) {
         return YES;
     }
-
-    if (self.isMarkChar & self.isEmoji) {
+    
+    if ([self stringContainsNine:string]) {
+        return YES;
+    }
+    
+    if (self.isMarkChar && self.isEmoji) {
         if (![self stringContainsMarkChar:string]) {
             return [self stringContainsMarkChar:string];
         }else if (![self stringContainsEmoji:string]){
             return [self stringContainsEmoji:string];
         }
-    }else if(self.isMarkChar | self.isEmoji){
+    }else if(self.isMarkChar || self.isEmoji){
         if (self.isMarkChar) {
             return [self stringContainsMarkChar:string];
         }
@@ -258,58 +264,59 @@
 
 -(void)textFieldChanged:(YDTextField *)sender{
     
-        if (self.textField.secureTextEntry == YES) {
-            sender.text = self.allStr;
-        }
+    if (self.textField.secureTextEntry == YES) {
+        sender.text = self.allStr;
+    }
     
-        NSRegularExpression *regx = [NSRegularExpression regularExpressionWithPattern:self.pattern options:NSRegularExpressionCaseInsensitive error:NULL];
+    NSRegularExpression *regx = [NSRegularExpression regularExpressionWithPattern:self.pattern options:NSRegularExpressionCaseInsensitive error:NULL];
+    
+    //高亮位置
+    UITextRange *selectedRange = sender.markedTextRange;
+    UITextPosition *position = [sender positionFromPosition:selectedRange.start offset:0];
+    
+    if (!position) {
         
-        UITextRange *selectedRange = sender.markedTextRange;
-        UITextPosition *position = [sender positionFromPosition:selectedRange.start offset:0];
+        NSPredicate *carTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",self.pattern];
+        [carTest evaluateWithObject:sender.text];
         
-        if (!position) {
-            
-            NSPredicate *carTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",self.pattern];
-            [carTest evaluateWithObject:sender.text];
-            
-            NSArray<NSTextCheckingResult *> *result = [regx matchesInString:sender.text options:0 range:NSMakeRange(0, sender.text.length)];
-            NSMutableString *resultString = [[NSMutableString alloc]init];
-            for (NSTextCheckingResult *checkingResult in result){
-                NSString *str = [sender.text substringWithRange:checkingResult.range];
-                [resultString appendString:str];
-            }
-                
-                if (self.limitLength != 0) {
-                    
-                  if (resultString.length >= self.strLength) {
-                    //新输入的字符串
-                    NSString *newStr = [resultString substringFromIndex:self.strLength];
-                    //旧的字符串
-                    NSString *oldStr = [resultString substringToIndex:self.strLength];
-                    //计算新字符串的字节长度
-                    NSInteger newStrLenght = [self strCharLenght:newStr];
-                    //计算旧的字符串的字节长度
-                    NSInteger oldStrLenght = [self strCharLenght:oldStr];
-                    
-                    if ((oldStrLenght+newStrLenght) <= self.limitLength) {
-                        sender.text = resultString;
-                    }else{
-                        sender.text = [resultString substringToIndex:self.strLength];
-                    }
-                    self.strLength = sender.text.length;
-                  }else{
-                      sender.text = resultString;
-                      self.strLength = sender.text.length;
-                  }
-                    
-                }else{
-                    sender.text = resultString;
-                }
-            
-            if ([self.delegate respondsToSelector:@selector(YDTextField:)]) {
-                [self.delegate YDTextField:sender];
-            }
+        NSArray<NSTextCheckingResult *> *result = [regx matchesInString:sender.text options:0 range:NSMakeRange(0, sender.text.length)];
+        NSMutableString *resultString = [[NSMutableString alloc]init];
+        for (NSTextCheckingResult *checkingResult in result){
+            NSString *str = [sender.text substringWithRange:checkingResult.range];
+            [resultString appendString:str];
         }
+        
+        if (self.limitLength != 0) {
+            
+            if (resultString.length >= self.strLength) {
+                //新输入的字符串
+                NSString *newStr = [resultString substringFromIndex:self.strLength];
+                //旧的字符串
+                NSString *oldStr = [resultString substringToIndex:self.strLength];
+                //计算新字符串的字节长度
+                NSInteger newStrLenght = [self strCharLenght:newStr];
+                //计算旧的字符串的字节长度
+                NSInteger oldStrLenght = [self strCharLenght:oldStr];
+                
+                if ((oldStrLenght+newStrLenght) <= self.limitLength) {
+                    sender.text = resultString;
+                }else{
+                    sender.text = [resultString substringToIndex:self.strLength];
+                }
+                self.strLength = sender.text.length;
+            }else{
+                sender.text = resultString;
+                self.strLength = sender.text.length;
+            }
+            
+        }else{
+            sender.text = resultString;
+        }
+        
+        if ([self.delegate respondsToSelector:@selector(YDTextField:)]) {
+            [self.delegate YDTextField:sender];
+        }
+    }
     
 }
 
@@ -327,7 +334,7 @@
     NSCharacterSet *characterSet = [[NSCharacterSet characterSetWithCharactersInString:[self.regularExpression MarkChar]] invertedSet];
     NSString *filtered = [[string componentsSeparatedByCharactersInSet:characterSet] componentsJoinedByString:@""];
     return ![string isEqualToString:filtered];
-
+    
 }
 
 //判断是否有emoji
@@ -360,5 +367,15 @@
     return !returnValue;
 }
 
+//判断是否有九宫格
+-(BOOL)stringContainsNine:(NSString *)string
+{
+    NSArray *nine = @[@"➋",@"➌",@"➍",@"➎",@"➏",@"➐",@"➑",@"➒"];
+    if ([nine containsObject:string]) {
+        return YES;
+    }
+    return NO;
+}
 
 @end
+
