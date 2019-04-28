@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name         = "YDTextField"
-  s.version      = "0.0.9"
+  s.version      = "1.1.0"
   s.summary      = "A library for collection device info."
   s.homepage     = "https://github.com/HYDupup/YDTextField"
   s.license      = "MIT"

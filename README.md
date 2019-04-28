@@ -23,6 +23,6 @@ BanChineseType//禁止输入中文 <br>
 ### 4.UITextField在加密与不加密状态之间交换时，文本不会清空 <br>
 ## Installation
 ```
-sss
+sssc ddd
 pod 'YDTextField' 即可使用
 ```
